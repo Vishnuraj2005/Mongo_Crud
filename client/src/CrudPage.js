@@ -17,7 +17,7 @@ function CrudPage()
     //insert 
 
     const addFoodData=()=>{
-        Axios.post("http://localhost:3001/insert",{foodName,description})
+        Axios.post("https://mongo-crud-57ta.onrender.com/insert",{foodName,description})
         .then((response)=>{
             console.log(response)
         })
@@ -29,7 +29,7 @@ function CrudPage()
     // get data
 
     const fetchData=()=>{
-        Axios.get("http://localhost:3001/read").then((response)=>{
+        Axios.get("https://mongo-crud-57ta.onrender.com/read").then((response)=>{
             console.log(response.data)
             setFoodList(response.data)
         })
@@ -38,14 +38,14 @@ function CrudPage()
     // update data
 
     const updateFood=(id)=>{
-        Axios.put(`http://localhost:3001/update`,{id,newFoodName,newDescription})
+        Axios.put(`https://mongo-crud-57ta.onrender.com/update`,{id,newFoodName,newDescription})
         .then(()=>fetchData())
     }
 
     // delete data
 
     const deleteFood=(id)=>{
-        Axios.delete(`http://localhost:3001/delete/${id}`).then(()=>fetchData())
+        Axios.delete(`https://mongo-crud-57ta.onrender.com/delete/${id}`).then(()=>fetchData())
     }
 
     return(
