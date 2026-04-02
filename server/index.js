@@ -4,9 +4,9 @@ const cors = require ('cors')
 const app = express()
 
 app.use(cors({
-    origin:'http://localhost:3000',
-    methods:['PUT','GET','POST','DELETE']
-}))
+  origin: "https://69ce7a0246abc518d56c1e2d--jade-gelato-6410dd.netlify.app",
+  methods: ["GET", "POST", "PUT", "DELETE"]
+}));
 
 app.use(express.json())
 
